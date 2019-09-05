@@ -1,0 +1,30 @@
+﻿@model d2tv.Models.RegistrationModel
+<h2>Регистрация</h2>
+
+<h2>Registration</h2>
+
+<form method="post" action="/Account/Register">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Login</label>
+        <input name="Username" class="form-control" placeholder="Login">
+        @Html.ValidationMessageFor(model => model.Username)
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input name="Email" class="form-control" placeholder="E-mail">
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input name="Password" class="form-control" type="password" placeholder="Password">
+        @Html.ValidationMessageFor(model => model.Password)
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Confirm Password</label>
+        <input name="PasswordConfirm" class="form-control" type="password" placeholder="Password">
+        @Html.ValidationMessageFor(model => model.PasswordConfirm)
+    </div>
+    <button type="submit" class="btn btn-primary">Registration</button>
+</form>
+
